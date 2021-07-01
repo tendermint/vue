@@ -1,0 +1,49 @@
+{
+  "name": "@starport/client-js",
+  "version": "0.1.52",
+  "description": "A generic JS client for the Websocket, high-level (Cosmos) and low-level (Tendermint) APIs",
+  "author": "Tendermint, Inc <hello@tendermint.com>",
+  "homepage": "https://github.com/tendermint/vue",
+  "license": "Apache-2.0",
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
+  "main": "lib/SPClient.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "watch": "babel src --out-dir lib --extensions \".ts,.tsx\" --watch --source-maps",
+    "build": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps",
+    "tsc": "tsc",
+    "lint": "eslint 'src/**/*.ts'",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.14.0",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/preset-env": "^7.14.1",
+    "@babel/preset-typescript": "^7.13.0",
+    "@types/node": "^12.20.5",
+    "@types/reconnectingwebsocket": "^1.0.6",
+    "@typescript-eslint/eslint-plugin": "^4.22.1",
+    "@typescript-eslint/parser": "^4.22.1",
+    "babel-loader": "^8.2.2",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "prettier": "^2.2.1",
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "@cosmjs/proto-signing": "0.25.0",
+    "@cosmjs/stargate": "0.25.0",
+    "@types/reconnectingwebsocket": "^1.0.6",
+    "axios": "^0.21.1",
+    "reconnecting-websocket": "^4.4.0"
+  }
+}

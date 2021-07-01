@@ -1,0 +1,47 @@
+{
+  "name": "@starport/vuex",
+  "version": "0.1.52",
+  "description": "A library of Vuex 4 (for Vue 3) standard store modules for state management of cosmos-sdk chains' frontends",
+  "author": "Tendermint, Inc <hello@tendermint.com>",
+  "homepage": "https://github.com/tendermint/vue",
+  "license": "Apache-2.0",
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
+  "main": "lib/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "babel src --out-dir lib  --source-maps",
+    "lint": "eslint 'src/**/*.js'",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "@confio/relayer": "^0.1.4",
+    "@cosmjs/crypto": "0.25.0",
+    "@cosmjs/encoding": "0.25.0",
+    "@cosmjs/launchpad": "0.25.0",
+    "@cosmjs/proto-signing": "0.25.0",
+    "@cosmjs/stargate": "0.25.0",
+    "@cosmjs/tendermint-rpc": "0.25.0",
+    "@cosmjs/utils": "0.25.0",
+    "@starport/client-js": "^0.1.52",
+    "axios": "^0.21.1",
+    "bs58": "^4.0.1",
+    "crypto-js": "^4.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.14.0",
+    "@babel/preset-env": "^7.14.1",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "prettier": "^2.2.1"
+  }
+}

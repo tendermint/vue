@@ -1,47 +1,27 @@
 {
-  "name": "@tendermint/vue",
-  "description": "A library of Vue.js components for Cosmos SDK apps",
-  "version": "0.1.12",
-  "main": "src/index.js",
-  "repository": "https://github.com/tendermint/vue",
+  "name": "root",
+  "private": true,
+  "description": "A monorepo of Vue and JS packages for Cosmos SDK apps",
+  "author": "Tendermint, Inc <hello@tendermint.com>",
+  "homepage": "https://github.com/tendermint/vue",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "netlify:prepare": "lerna bootstrap --hoist && lerna run build --scope='{@starport/client-js,@starport/vue,@starport/vuex}'",
+    "netlify:linkvue": "cd ./packages/vue && npm link",
+    "netlify:linkvuex": "cd ./packages/vuex && npm link",
+    "netlify:build": "npm run netlify:prepare && npm run netlify:linkvue && npm run netlify:linkvuex && cd ./packages/template && npm install && npm link @starport/vue @starport/vuex && npm run build -- --mode spn"
   },
-  "dependencies": {
-    "@cosmjs/encoding": "0.24.0-alpha.10",
-    "@cosmjs/launchpad": "0.24.0-alpha.10",
-    "@cosmjs/proto-signing": "0.24.0-alpha.10",
-    "@cosmjs/stargate": "0.24.0-alpha.10",
-    "axios": "^0.20.0",
-    "bip39": "^3.0.2",
-    "core-js": "^3.6.5",
-    "js-sha256": "^0.9.0",
-    "lodash": "^4.17.20",
-    "moment": "^2.29.1",
-    "reconnecting-websocket": "^4.4.0",
-    "vue": "^2.6.11",
-    "vue-router": "^3.2.0",
-    "vue-uuid": "^2.0.2",
-    "vuex": "^3.4.0"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tendermint/vue.git"
   },
+  "license": "Apache-2.0",
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.5.0",
-    "@vue/cli-plugin-eslint": "^4.5.8",
-    "@vue/cli-plugin-router": "^4.5.0",
-    "@vue/cli-plugin-vuex": "^4.5.0",
-    "@vue/cli-service": "^4.5.0",
-    "@vue/eslint-config-standard": "^5.1.2",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-config-prettier": "^6.15.0",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.0",
-    "eslint-plugin-vue": "^6.2.2",
-    "vue-template-compiler": "^2.6.11"
+    "lerna": "^3.22.1"
   }
 }

@@ -1,0 +1,47 @@
+{
+  "name": "@starport/vue",
+  "version": "0.1.52",
+  "description": "A library of Vue 3 components for building frontends for cosmos-sdk chains",
+  "author": "Tendermint, Inc <hello@tendermint.com>",
+  "scripts": {
+    "build": "vue-cli-service build --target lib --name starport-vue src/index.ts --dest lib",
+    "lint": "vue-cli-service lint",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "main": "lib/starport-vue.common.js",
+  "dependencies": {
+    "bip39": "^3.0.4",
+    "core-js": "^3.11.2",
+    "crypto-js": "^4.0.0",
+    "dayjs": "^1.10.4",
+    "file-saver": "^2.0.5",
+    "gradient-avatar": "^1.0.2",
+    "js-base64": "^3.6.0"
+  },
+  "devDependencies": {
+    "@cosmjs/encoding": "0.25.0",
+    "@starport/vuex": "^0.1.52",
+    "@types/crypto-js": "^4.0.1",
+    "@types/file-saver": "^2.0.2",
+    "@types/js-base64": "^3.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.22.1",
+    "@typescript-eslint/parser": "^4.22.1",
+    "@vue/cli-plugin-babel": "^4.5.12",
+    "@vue/cli-plugin-eslint": "^4.5.12",
+    "@vue/cli-plugin-router": "^4.5.12",
+    "@vue/cli-plugin-typescript": "^4.5.12",
+    "@vue/cli-plugin-vuex": "^4.5.12",
+    "@vue/cli-service": "^4.5.12",
+    "@vue/compiler-sfc": "^3.0.11",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/eslint-config-typescript": "^7.0.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-vue": "^7.9.0",
+    "node-sass": "^4.12.0",
+    "prettier": "^2.2.1",
+    "sass-loader": "^8.0.2",
+    "typescript": "^4.2.4",
+    "webpack-bundle-analyzer": "^4.4.1"
+  }
+}

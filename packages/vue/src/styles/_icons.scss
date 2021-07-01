@@ -1,0 +1,123 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?b1wyd9');
+  src:  url('../fonts/icomoon.eot?b1wyd9#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?b1wyd9') format('truetype'),
+    url('../fonts/icomoon.woff?b1wyd9') format('woff'),
+    url('../fonts/icomoon.svg?b1wyd9#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="sp-icon-"], [class*=" sp-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.sp-icon-Download:before {
+  content: "\e900";
+}
+.sp-icon-Upload:before {
+  content: "\e901";
+}
+.sp-icon-Key:before {
+  content: "\e902";
+}
+.sp-icon-Copy:before {
+  content: "\e903";
+}
+.sp-icon-Unlock:before {
+  content: "\e904";
+}
+.sp-icon-Lock:before {
+  content: "\e905";
+}
+.sp-icon-AddNew:before {
+  content: "\e906";
+}
+.sp-icon-Add:before {
+  content: "\e907";
+}
+.sp-icon-Close:before {
+  content: "\e908";
+}
+.sp-icon-LeftArrow:before {
+  content: "\e909";
+}
+.sp-icon-UpArrow:before {
+  content: "\e90a";
+}
+.sp-icon-DownArrow:before {
+  content: "\e90b";
+}
+.sp-icon-RightArrow:before {
+  content: "\e90c";
+}
+.sp-icon-LeftCaret:before {
+  content: "\e90d";
+}
+.sp-icon-UpCaret:before {
+  content: "\e90e";
+}
+.sp-icon-DownCaret:before {
+  content: "\e90f";
+}
+.sp-icon-RightCaret:before {
+  content: "\e910";
+}
+.sp-icon-Status:before {
+  content: "\e911";
+}
+.sp-icon-Docs:before {
+  content: "\e912";
+}
+.sp-icon-Settings:before {
+  content: "\e913";
+}
+.sp-icon-Form:before {
+  content: "\e914";
+}
+.sp-icon-Transactions:before {
+  content: "\e915";
+}
+.sp-icon-Modules:before {
+  content: "\e916";
+}
+.sp-icon-Dashboard:before {
+  content: "\e917";
+}
+.sp-icon-More:before {
+  content: "\e918";
+}
+.sp-icon-Delete:before {
+  content: "\e919";
+}
+.sp-icon-Hash:before {
+  content: "\e91a";
+}
+.sp-icon-Reload:before {
+  content: "\e91b";
+}
+.sp-icon-Search:before {
+  content: "\e91c";
+}
+.sp-icon-Token:before {
+  content: "\e91d";
+}
+.sp-icon-Hamburger:before {
+  content: "\e91e";
+}
+.sp-icon-Check:before {
+  content: "\e91f";
+}

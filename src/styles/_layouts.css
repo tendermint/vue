@@ -1,9 +1,0 @@
-:root {
-  --sp-g-offset-side: 3rem;
-}
-
-@media only screen and (max-width: 1200px) {
-  :root {
-    --sp-g-offset-side: 2rem;
-  } 
-}

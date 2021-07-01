@@ -1,51 +1,11 @@
-# Library of Vue components for Starport
+# Monorepo for Starport front-end development
 
-## Install
+This monorepo contains packages to simplify frontend development (primarily using Vue 3) for Starport-launched chains.
 
-```
-npm add @tendermint/vue
-```
+The included packages are:
 
-First, import a `cosmos` Vuex module:
+* [@starport/client-js](https://github.com/tendermint/vue/tree/develop/packages/client-js)
+* [@starport/vuex](https://github.com/tendermint/vue/tree/develop/packages/vuex)
+* [@starport/vue](https://github.com/tendermint/vue/tree/develop/packages/vue)
 
-```js
-// src/store/index.js
-import cosmos from "@tendermint/vue/src/store/cosmos.js";
-
-export default new Vuex.Store({
-  modules: { cosmos },
-});
-```
-
-Then, dispatch a `cosmos/init` Vuex action:
-
-```js
-// src/App.vue
-export default {
-  created() {
-    this.$store.dispatch("cosmos/init");
-  },
-};
-```
-
-Finally, import components:
-
-```js
-// src/views/Index.vue
-import * as sp from "@tendermint/vue";
-
-export default {
-  components: { ...sp },
-};
-```
-
-## Configure
-
-| Environment variable     | Default value                      |
-| ------------------------ | ---------------------------------- |
-| `VUE_APP_ADDRESS_PREFIX` | `cosmos`                           |
-| `VUE_APP_API_COSMOS`     | `"http://localhost:1317"`          |
-| `VUE_APP_API_TENDERMINT` | `"http://localhost:26657"`         |
-| `VUE_APP_API_WS`         | `"ws://localhost:26657/websocket"` |
-
-Variable values can be changed in the [`.env` file](https://cli.vuejs.org/guide/mode-and-env.html#environment-variables).
+Browse the READMEs in each package for details.

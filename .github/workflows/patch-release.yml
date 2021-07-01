@@ -1,0 +1,40 @@
+name: Publish new patch version
+
+# Controls when the action will run. 
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
+          registry-url: 'https://registry.npmjs.org'
+          scope: starport
+          
+      - name: Bootstrap
+        run: lerna bootstrap --hoist
+
+      - name: Build
+        run: lerna run build --scope='{@starport/client-js,@starport/vue,@starport/vuex}'
+
+      - name: Configure git
+        run: git config --global user.email "hello@tendermint.com" &&  git config --global user.name "Lerna CI"
+
+      - name: Create Release
+        run: 'lerna version patch --yes -m "chore(release): publish %s"'
+
+      - name: Publish
+        run: lerna publish from-git --yes --no-verify-access
+
+        env:
+          GH_TOKEN: ${{ secrets.sp_gh_token }}
+          GITHUB_TOKEN: ${{ secrets.sp_gh_token }}
+          NODE_AUTH_TOKEN: ${{secrets.sp_npm_token}}
